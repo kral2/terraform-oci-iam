@@ -6,7 +6,7 @@ This [Terraform module](https://www.terraform.io/docs/modules/index.html) define
 
 Below is the typical module block you should add to your configuration to create a compartment with this module.
 
-**IMPORTANT:** There is no version pinning of modules in the examples to lower documentation maintenance when releasing new module versions. It is a good practice to pin the module version to the exact version you are using in your code so that your infrastructure remains stable and predictible.
+**IMPORTANT:** There is no version pinning of modules in the example code of this module: this is to simplify the documentation process when releasing a new versions. But in production, it is a good practice to pin the module version to the exact version you are using in your code so that your infrastructure remains stable and predictible.
 
 ```hcl
 module "iam_dynamic_group" {

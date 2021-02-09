@@ -1,13 +1,11 @@
 # Create Compartment, Sub-compartment, Users, Group and Dynamic Group
 
-This example shows how to create a compartement and two sub-compartemnt.
+This example shows how to create a compartement with two sub-compartemnt, and the following resources:
 
-This example also shows how to create:
-
-- several users with a single module block,
-- a group and add users to it,
-- a policy pertaining to a compartment and group,
-- some more directives to show dynamic groups and policy for it.
+- several users,
+- a group with members,
+- a policy inside a compartment, defining specific permissions granted to a group,
+- some more directives to show dynamic groups and associated policy.
 
 Notes:
 
@@ -16,7 +14,9 @@ All resources created by this example can be deleted by using the `terraform des
 - When using the oci-iam modules, or more generally when manipulating iam resources, **be sure to configure your oci provider to use the tenancy's home region**, as IAM resources can only be managed from the home region.
 - To combine this template with non-iam resources provisioned in a region different from your *home region*, you will need to use [provider aliases](https://www.terraform.io/docs/configuration/providers.html#alias-multiple-provider-configurations).
 
-## Using this example
+## How to use this example on the cli
+
+Alternatlively, you can also deploy the configuration in this folder using Terraform cli on your desktop or with [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)
 
 - Create a "terraform.tfvars" file based on the provided template, "terraform.tfvars.template", and fill in the necessary info.
 - Initialize the directory:
@@ -25,13 +25,13 @@ All resources created by this example can be deleted by using the `terraform des
 > terraform init
 ```
 
-- Inspect what Terraform plans to do for the next `apply`:
+- Inspect what Terraform plans to do on the next `apply`:
 
 ```bash
 > terraform plan
 ```
 
-- If proposed changes are what is intended, apply the current plan to Provision resources on OCI (if not, abort the operation and review the configuration):
+- If proposed changes are what is intended, apply the current plan to provision resources on OCI (if not, abort the operation and review the configuration):
 
 ```bash
 > terraform apply

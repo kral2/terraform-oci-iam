@@ -11,6 +11,12 @@ Given a version number MAJOR.MINOR.PATCH:
 - MINOR version when adding functionality in a backwards compatible manner,
 - PATCH version when making backwards compatible bug fixes.
 
+## [Unreleased]
+
+### Added
+
+- module examples can be deployed directly from documentation to Resource Manager with the "Deploy to Oracle Cloud" button.
+
 ## [2.0.1] - 2021-02-09
 
 ### Fixed
